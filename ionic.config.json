@@ -1,0 +1,7 @@
+{
+  "name": "capLoadGo1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
