@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Plugins } from '@capacitor/core';
+import { LibGoPlugin } from "../app.plugins";
 
 @Component({
   selector: 'app-home',
@@ -8,22 +8,24 @@ import { Plugins } from '@capacitor/core';
 })
 export class HomePage {
 
+  answer = 'loading answer...'
+
   constructor() {
     console.log("HomePage constructor");
   }
 
   async golibFunction() {
     console.log("golibFunction 1");
-    if ('LibGoPlugin' in Plugins) {
-      const goLib = Plugins['LibGoPlugin'];
-      const result = await goLib['GoodMorning']();
-      console.log(`golibFunction Goodmorning answer: ${result.answer}`);
+    if (!!LibGoPlugin) {
+      const { answer } = await LibGoPlugin.GoodMorning();
+      this.answer = answer
+      console.log(`golibFunction Goodmorning answer: ${answer}`);
     }
     else {
       console.log("golibFunction no plugin");
     }
   }
-  
+
   async ngAfterViewInit() {
     await this.golibFunction();
   }

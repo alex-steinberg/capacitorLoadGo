@@ -14,9 +14,10 @@
 		504EC30F1FED79650016851F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30E1FED79650016851F /* Assets.xcassets */; };
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
+		9154F2E52AD87EF1004AFC66 /* libgolib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EBDAC32AD84F7200D43C0F /* libgolib.a */; };
+		91EBDABF2AD84C1300D43C0F /* loadGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EBDABE2AD84C1300D43C0F /* loadGo.swift */; };
+		91EBDAC22AD84C9A00D43C0F /* LibGoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EBDAC12AD84C9A00D43C0F /* LibGoPlugin.m */; };
 		A084ECDBA7D38E1E42DFC39D /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */; };
-		B126D0552AD0562F00A46567 /* loadGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D0542AD0562F00A46567 /* loadGo.swift */; };
-		B126D0582AD05A1D00A46567 /* LibGoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B126D0572AD05A1D00A46567 /* LibGoPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +30,14 @@
 		504EC3111FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		504EC3131FED79650016851F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B271D01FEDC1A000F3C39B /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		91EBDABE2AD84C1300D43C0F /* loadGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadGo.swift; sourceTree = "<group>"; };
+		91EBDAC02AD84C9900D43C0F /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		91EBDAC12AD84C9A00D43C0F /* LibGoPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibGoPlugin.m; sourceTree = "<group>"; };
+		91EBDAC32AD84F7200D43C0F /* libgolib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgolib.a; path = golib/libgolib.a; sourceTree = "<group>"; };
+		91EBDAC62AD8507300D43C0F /* libgolib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libgolib.h; path = golib/libgolib.h; sourceTree = "<group>"; };
+		91EBDAC82AD8508900D43C0F /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = golib/module.modulemap; sourceTree = "<group>"; };
 		AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF51FD2D460BCFE21FA515B2 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
-		B126D0542AD0562F00A46567 /* loadGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadGo.swift; sourceTree = "<group>"; };
-		B126D0562AD05A1C00A46567 /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
-		B126D0572AD05A1D00A46567 /* LibGoPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibGoPlugin.m; sourceTree = "<group>"; };
 		FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A084ECDBA7D38E1E42DFC39D /* Pods_App.framework in Frameworks */,
+				9154F2E52AD87EF1004AFC66 /* libgolib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,9 @@
 		27E2DDA53C4D2A4D1A88CE4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91EBDAC82AD8508900D43C0F /* module.modulemap */,
+				91EBDAC62AD8507300D43C0F /* libgolib.h */,
+				91EBDAC32AD84F7200D43C0F /* libgolib.a */,
 				AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */,
 			);
 			name = Frameworks;
@@ -78,7 +86,6 @@
 		504EC3061FED79650016851F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B126D0572AD05A1D00A46567 /* LibGoPlugin.m */,
 				50379B222058CBB4000EE86E /* capacitor.config.json */,
 				504EC3071FED79650016851F /* AppDelegate.swift */,
 				504EC30B1FED79650016851F /* Main.storyboard */,
@@ -87,8 +94,9 @@
 				504EC3131FED79650016851F /* Info.plist */,
 				2FAD9762203C412B000D30F8 /* config.xml */,
 				50B271D01FEDC1A000F3C39B /* public */,
-				B126D0542AD0562F00A46567 /* loadGo.swift */,
-				B126D0562AD05A1C00A46567 /* App-Bridging-Header.h */,
+				91EBDABE2AD84C1300D43C0F /* loadGo.swift */,
+				91EBDAC12AD84C9A00D43C0F /* LibGoPlugin.m */,
+				91EBDAC02AD84C9900D43C0F /* App-Bridging-Header.h */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -135,7 +143,7 @@
 				TargetAttributes = {
 					504EC3031FED79650016851F = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1430;
+						LastSwiftMigration = 1500;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -215,9 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B126D0582AD05A1D00A46567 /* LibGoPlugin.m in Sources */,
+				91EBDAC22AD84C9A00D43C0F /* LibGoPlugin.m in Sources */,
+				91EBDABF2AD84C1300D43C0F /* loadGo.swift in Sources */,
 				504EC3081FED79650016851F /* AppDelegate.swift in Sources */,
-				B126D0552AD0562F00A46567 /* loadGo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -357,27 +365,30 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YG2T4428W2;
+				DEVELOPMENT_TEAM = K8229G6MDX;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"${SRCROOT}/golib",
 					"$(inherited)",
-					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
-					/usr/lib/swift,
+					"$(PROJECT_DIR)/golib",
+					"$(PROJECT_DIR)/App",
+					"${SRCROOT}/golib/**",
 				);
-				MARKETING_VERSION = 1.0;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/golib",
+					"$(PROJECT_DIR)/App",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = io.ionic.starterxxxP;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.steinrock.caplandgov3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/golib";
 				SWIFT_OBJC_BRIDGING_HEADER = "App/App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				_EXPERIMENTAL_CLANG_EXPLICIT_MODULES = YES;
 			};
 			name = Debug;
 		};
@@ -388,25 +399,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YG2T4428W2;
+				DEVELOPMENT_TEAM = K8229G6MDX;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"${SRCROOT}/golib",
 					"$(inherited)",
-					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
-					/usr/lib/swift,
+					"$(PROJECT_DIR)/golib",
+					"$(PROJECT_DIR)/App",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.ionic.starterxxxP;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.steinrock.caplandgov3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/golib";
 				SWIFT_OBJC_BRIDGING_HEADER = "App/App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				_EXPERIMENTAL_CLANG_EXPLICIT_MODULES = YES;
 			};
 			name = Release;
 		};

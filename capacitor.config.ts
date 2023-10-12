@@ -1,12 +1,10 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'capLoadGo1',
+  appId: 'za.co.steinrock.caplandgov3',
+  appName: 'capLandGo1_v3',
   webDir: 'www',
-  server: {
-    androidScheme: 'https'
-  }
+  bundledWebRuntime: false
 };
 
 export default config;
